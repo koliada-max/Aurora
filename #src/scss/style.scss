@@ -1,0 +1,90 @@
+//<МИКСИНЫ>===================
+@import "mixins";
+//</МИКСИНЫ>==================
+
+//<ШРИФТЫ>====================
+
+//<Подключаем шрифты>=========
+//&display=swap&subset=cyrillic-ext
+@import "fonts";
+//</Подключаем шрифты>========
+
+//<Иконочные шрифты>==========
+@import "icons";
+//</Иконочные шрифты>=========
+
+//<Шрифт по умолчанию>========
+$fontFamily: "Poppins";
+$fontCormorant: "CormorantGaramond";
+$fontSize: 12;
+//</Шрифт по умолчанию>=======
+
+//</ШРИФТЫ>===================
+
+//<ПЕРЕМЕННЫЕ>================
+$minWidth: 320px;
+$maxWidth: 1440px;
+$maxWidthContainer: 1422;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+$mainColor: rgba(0, 0, 0, 1);
+$witeColor: rgba(255, 255, 255, 1);
+$hoverColor: rgb(153, 74, 74);
+
+//</ПЕРЕМЕННЫЕ>==
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>==
+@import "null";
+body {
+	color: $mainColor;
+	&._lock {
+		overflow: hidden;
+	}
+}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>==
+
+//<ОБОЛОЧКА>==
+// .wrapper {
+// 	width: 100%;
+// 	min-height: 100%;
+// 	overflow: hidden;
+// 	display: flex;
+// 	flex-direction: column;
+// 	//     &._loaded {
+
+	// }
+// }
+//</ОБОЛОЧКА>==
+
+//<ОСНОВНАЯ СЕТКА>==
+// ._container {
+//     max-width: $maxWidthContainer + px;
+//     padding: 0px 15px;
+// 	margin: 0 auto;
+// }
+//</ОСНОВНАЯ СЕТКА>==
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>==
+@import "forms";
+@import "ui";
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>==
+@import "popup";
+@import "header";
+@import "footer";
+@import "home";
+@import "bunner";
+@import "hero";
+@import "container";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>==
+
+//<ОСНОВНОЙ БЛОК>======
+// .page {
+// 	flex: 1 1 auto;
+// }
+//=====================
+
+//</ОСНОВНОЙ БЛОК>=====
