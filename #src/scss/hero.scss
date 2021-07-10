@@ -1,0 +1,40 @@
+.hero{
+    background-image: url("../img/bg-mob.jpg");
+    background-size: 100%;
+    background-color: #333333;
+    height: 480px;
+    position: relative;
+    @media (min-resolution: 2dppx) {
+        background-image: url("../img/bg-mob@2x.jpg");
+
+    }
+
+    @media screen and (min-width: 1440px){
+        height: 658px;
+        background-image: url("../img/bg-desk.jpg");
+    }
+    
+    &__title-wrapper{
+        display: none;
+
+        @media screen and (min-width: 1440px){
+        position: absolute;
+        top:320px;
+        left:50%;
+        transform:translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        width: 787px;
+        
+        line-height: 90px;
+        text-align: center;
+        font-family: $fontFamily;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 60px;
+        color: $witeColor;
+
+        }
+    }
+}

@@ -1,0 +1,78 @@
+.bunner{
+    display: none;
+    @media screen and (min-width: 1440px){
+        z-index: 1;
+        display: block;
+    }
+    
+&__top{
+        background-color: $witeColor;
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+        height: 24px;
+        z-index: 2;
+    }
+    &__top_top-container{
+        width: 1392px;
+        height: 17px;
+        padding-top: 4px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    &__top_text{
+        align-items: center;
+        padding-top: 0;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11px;
+        
+        /* identical to box height */
+        text-align: center;
+        letter-spacing: 0.8px;
+        color: $mainColor;
+    }
+    &__top_text-non{
+        flex: 0 1 auto;
+        visibility: hidden;
+    }
+    &__top_text-center{
+        align-items:center;
+        flex: 0 1 auto;
+        .right{
+            flex: 0 1 auto;
+        }
+        & :hover{
+            color: $hoverColor;
+        }
+    }
+    &__top_marker{
+        color: $mainColor;
+    }
+}
+    .map{
+    display: flex;
+    flex-direction: row;
+    & :hover{
+        color: $hoverColor;
+    }
+    &__item_icon{
+        margin-right: 6px;
+    }
+    &__link{
+        color: $mainColor;
+    }
+    &__link_icon{
+        color: $mainColor;
+        font-size: 11px;
+    }
+    &__link_store{
+        font-size: 10px;
+        color: $mainColor;
+    }
+}
