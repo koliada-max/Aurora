@@ -694,7 +694,9 @@ body.ie ._ibg img {
 
 .header__registration-container {
   width: 157px;
-  background-color: green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .header__btn-buy._icon-basket {
@@ -784,6 +786,44 @@ body.ie ._ibg img {
 :-ms-input-placeholder {
   /* Internet Explorer 10+ */
   color: white;
+}
+
+.action-header__login {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  color: white;
+  margin-right: 10px;
+}
+
+.action-header__reg {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  color: white;
+}
+
+.action__header_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-right: 17.72px;
+}
+
+.vl {
+  border-left: 2px solid white;
+  height: 20px;
+  margin-right: 10px;
 }
 
 .burger-menu {
@@ -1070,6 +1110,27 @@ body.ie ._ibg img {
 
 @media screen and (max-width: 360px) {
   .header__form-search {
+    display: none;
+  }
+
+  .search-btn_mob {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .action-header__login {
+    display: none;
+  }
+
+  .action-header__reg {
+    display: none;
+  }
+
+  .action__header_list {
+    display: none;
+  }
+
+  .vl {
     display: none;
   }
 }
