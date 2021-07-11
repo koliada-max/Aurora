@@ -8,6 +8,18 @@ window.onscroll = function () {
     }
     prevScrollpos = currentScrollPos;
 }
+
+
+
+/* Open when someone clicks on the span element */
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
 const dropBtn = document.querySelector('.footer__btn');
 
 const dropList = document.querySelector('.footer__list-drop');

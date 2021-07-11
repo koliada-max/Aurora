@@ -1,6 +1,7 @@
 @font-face {
     font-family: "icons";
     font-family: "iconss";
+    font-family: "icons1";
 	font-display: swap;
 	src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2#icons") format("woff2");
 	font-weight: normal;
@@ -59,6 +60,18 @@
 ._icon-close:before {
     content: "\e909";
 }
+._icon-facebook:before {
+  content: "\e800";
+}
+._icon-insta:before {
+  content: "\e801";
+}
+._icon-snapchat:before {
+  content: "\e802";
+}
+._icon-twitter:before {
+  content: "\e803";
+}
 ._icon-youtube:before {
-    content: "\e911";
+  content: "\e804";
 }
