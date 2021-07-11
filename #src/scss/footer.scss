@@ -1,5 +1,118 @@
-footer{}
-//====================================================================================================
+.footer{
 
-//====================================================================================================
+    &__list{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
 
+        @media screen and (min-width: 1440px){
+            width: 891px;
+            margin: 0 auto;
+            flex-direction: row ;
+            justify-content: space-between;
+            padding-top: 26px;
+        }
+        
+    }
+
+    &__item{
+       position: relative;
+       background-color: violet;
+
+        @media screen and (min-width: 1440px){
+            flex-basis: calc((100% - 100px) / 5);
+        }
+    }
+
+    &__title{
+        padding: 12px 0;
+    }
+
+    &__btn{
+        position: absolute;
+        right: 0;
+        top: 20px;
+        transform: translateY(-50%);
+
+        @media screen and (min-width: 1440px){
+            display: none;
+        }
+
+
+    }
+
+    &__list-drop{
+        background-color: rgb(0, 68, 255);
+        padding-top: 2px;
+        padding-bottom: 10px;
+
+        @media screen and (min-width: 1440px){
+            padding-bottom: 0;
+        }
+    } 
+
+    &__item-drop:not(:last-child){
+        margin-bottom: 10px ;
+        
+        @media screen and (min-width: 1440px){
+            margin-bottom: 6px;
+        }
+        
+    }
+
+  
+
+    &__social-padding{
+       padding-top: 5px;
+       padding-bottom: 16px;
+       @media screen and (min-width: 1440px){
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    &__social{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+
+    &__social-item{
+        width: 40px;
+        height: 40px;
+        position: relative;
+
+         @media screen and (min-width: 1440px){
+            width: 35px;
+            height: 35px;
+        }
+    }
+
+    &__social-icon{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__rights{
+        text-align: center;
+        padding-bottom: 22px;
+
+        @media screen and (min-width: 1440px){
+            padding-top: 38px;
+        }
+    }
+
+   
+}
+
+.is-hidden{
+    display: none;
+
+    @media screen and (min-width: 1440px){
+            display: block;
+        }
+}
