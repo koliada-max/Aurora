@@ -113,10 +113,11 @@
         width: 40px;
         height: 40px;
         position: relative;
+        fill: $mainColor;
         cursor: pointer;
-        
+    
         &:hover,&:focus{
-            color: $hoverColor;
+            fill: $hoverColor;
         }
 
         @media screen and (min-width: 1440px){
@@ -128,13 +129,22 @@
     &__social-icon{
         position: absolute;
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        left: 0;
+        transform: translateY(-50%);
+        fill: $mainColor;
         cursor: pointer;
-        color: $mainColor;
         
         &:hover,&:focus{
-        color: $hoverColor;
+            fill: $hoverColor;
+        }
+    }
+
+    &__icon{
+        fill: $mainColor;
+        cursor: pointer;
+        
+        &:hover,&:focus{
+            fill: $hoverColor;
         }
     }
 
@@ -159,8 +169,8 @@
             padding-top: 38px;
         }
     }
-}
 
+}
 .is-hidden{
     display: none;
 

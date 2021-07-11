@@ -2,9 +2,22 @@
     <!-- mob -->
     <div class="header__wrapper-mob container">
         <div class="header__burger-container">
+            <!-- The overlay -->
+            <div id="myNav" class="overlay">
+                <!-- Button to close the overlay navigation -->
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <!-- Overlay content -->
+                <div class="overlay-content">
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Clients</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
             <button class="burger-menu" type="button">
-                <img src="./img/icons/menu-burger.svg">
+                <span onclick="openNav()"></span><img src="./img/icons/menu-burger.svg"></span>
             </button>
+            <!-- search mob -->
             <button type="submit" class="search-btn_mob _icon-search"></button>
             <!-- form -->
             <div class="header__form-search">
@@ -75,9 +88,6 @@
                         <!-- Button HTML (to Trigger Modal) -->
                         <a href="#0" class="trigger-btn action-header__login cd-signin" data-toggle="modal">Sing in</a>
                     </div>
-                </li>
-                <li>
-                    <div class="vl"></div>
                 </li>
                 <li>
                     <a href="#0" class="action-header__reg cd-sigup">Register</a>

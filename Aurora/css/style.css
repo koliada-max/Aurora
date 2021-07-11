@@ -51,6 +51,7 @@
 @font-face {
   font-family: "icons";
   font-family: "iconss";
+  font-family: "icons1";
   font-display: swap;
   src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2#icons") format("woff2");
   font-weight: normal;
@@ -119,8 +120,24 @@
   content: "";
 }
 
+._icon-facebook:before {
+  content: "";
+}
+
+._icon-insta:before {
+  content: "";
+}
+
+._icon-snapchat:before {
+  content: "";
+}
+
+._icon-twitter:before {
+  content: "";
+}
+
 ._icon-youtube:before {
-  content: "";
+  content: "";
 }
 
 * {
@@ -221,15 +238,6 @@ h6 {
 
 body {
   color: black;
-}
-
-._no-webp main{
-  background-image: url("../img/BG1.png"); }
-
-main {
-  background-position: center;
-  background-size: 100%;
-  background-color: #333333;
 }
 
 .form {
@@ -408,7 +416,6 @@ main {
 
 .header__btn-buy {
   font-size: 23px;
-  margin-top: 20px;
   margin-right: 8px;
 }
 
@@ -483,6 +490,7 @@ main {
 
 .header__btn-buy._icon-basket {
   color: white;
+  font-size: 24px;
   cursor: pointer;
 }
 
@@ -591,7 +599,8 @@ main {
   font-weight: 600;
   font-size: 11px;
   color: white;
-  margin-right: 10px;
+  padding-right: 5px;
+  border-right: 2px solid white;
   cursor: pointer;
 }
 
@@ -606,6 +615,7 @@ main {
   font-weight: 600;
   font-size: 11px;
   color: white;
+  padding-left: 5px;
   cursor: pointer;
 }
 
@@ -624,12 +634,8 @@ main {
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin-right: 17.72px;
-}
-
-.vl {
-  border-left: 2px solid white;
-  height: 20px;
-  margin-right: 10px;
+  margin-bottom: 0;
+  padding-top: 8px;
 }
 
 .burger-menu {
@@ -671,51 +677,76 @@ main {
   padding-top: 6px;
 }
 
-/*
-//Burger
-.icon-menu {
-	display: none;
-	@media (max-width: $md3+px) {
-		display: block;
-		position: absolute;
-		top: 18px;
-		right: 10px;
-		width: 30px;
-		height: 18px;
-		cursor: pointer;
-		z-index: 5;
-		span {
-			transition: all 0.3s ease 0s;
-			top: calc(50% - 1px);
-			left: 0px;
-			position: absolute;
-			width: 100%;
-			height: 2px;
-			background-color: #000;
-			&:first-child {
-				top: 0px;
-			}
-			&:last-child {
-				top: auto;
-				bottom: 0px;
-			}
-		}
-		&._active {
-			span {
-				transform: scale(0);
-				&:first-child {
-					transform: rotate(-45deg);
-					top: calc(50% - 1px);
-				}
-				&:last-child {
-					transform: rotate(45deg);
-					bottom: calc(50% - 1px);
-				}
-			}
-		}
-	}
+/* The Overlay (background) */
+
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: black;
+  /* Black fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/opacity */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
-*/
+
+/* Position the content inside the overlay */
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  /* 25% from the top */
+  width: 100%;
+  /* 100% width */
+  text-align: center;
+  /* Centered text/links */
+  margin-top: 30px;
+  /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  /* Display block instead of inline */
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 
 .footer {
   background: #F7F7F7;
@@ -822,28 +853,39 @@ main {
   width: 40px;
   height: 40px;
   position: relative;
+  fill: black;
   cursor: pointer;
 }
 
 .footer__social-item:hover,
 .footer__social-item:focus {
-  color: #994a4a;
+  fill: #994a4a;
 }
 
 .footer__social-icon {
   position: absolute;
   top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  left: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  fill: black;
   cursor: pointer;
-  color: black;
 }
 
 .footer__social-icon:hover,
 .footer__social-icon:focus {
-  color: #994a4a;
+  fill: #994a4a;
+}
+
+.footer__icon {
+  fill: black;
+  cursor: pointer;
+}
+
+.footer__icon:hover,
+.footer__icon:focus {
+  fill: #994a4a;
 }
 
 .footer__rights {
@@ -975,11 +1017,13 @@ main {
 }
 
 ._no-webp .hero{
-  background-image: url("../img/bg-desk.jpg"); }
+  background-image: url("../img/bg-mob.jpg"); }
 
 .hero {
   height: 480px;
   position: relative;
+  background-color: #d3c598;
+  background-size: 100%;
 }
 
 .hero__title-wrapper {
@@ -1181,9 +1225,17 @@ main {
   .action__header_list {
     display: none;
   }
+}
 
-  .vl {
-    display: none;
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
   }
 }
 
@@ -1192,9 +1244,7 @@ main {
     background-image: url("../img/bg-mob@2x.jpg"); }
 }
 
-._webp main{ background-image: url(../img/BG1.webp); }
-
-._webp .hero{ background-image: url(../img/bg-desk.webp); }
+._webp .hero{ background-image: url(../img/bg-mob.webp); }
 
 @media screen and (min-width: 1440px){
 
