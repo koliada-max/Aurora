@@ -48,6 +48,11 @@
         background-color: $mainColor;
         border-radius: 3px;
         color: $witeColor;
+        cursor: pointer;
+        
+        &:hover,&:focus{
+        color: $hoverColor;
+        }
         @media screen and (min-width: 1440px) {
             max-width: 94px;
             margin-left: 12px;

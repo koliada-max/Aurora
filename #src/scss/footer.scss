@@ -1,10 +1,10 @@
 .footer{
-
+    background: #F7F7F7;
     &__list{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-
+        
         @media screen and (min-width: 1440px){
             width: 891px;
             margin: 0 auto;
@@ -15,9 +15,17 @@
         
     }
 
+    &__color{
+        color: $mainColor;
+        cursor: pointer;
+        
+        &:hover,&:focus{
+            color: $hoverColor;
+        }
+    }
+
     &__item{
-       position: relative;
-       background-color: violet;
+        position: relative;
 
         @media screen and (min-width: 1440px){
             flex-basis: calc((100% - 100px) / 5);
@@ -26,6 +34,17 @@
 
     &__title{
         padding: 12px 0;
+        font-family: Cormorant Garamond;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 1.16364px;
+        color: $mainColor;
+        cursor: pointer;
+        &:hover,&:focus{
+        color: $hoverColor;
+        }
     }
 
     &__btn{
@@ -42,10 +61,9 @@
     }
 
     &__list-drop{
-        background-color: rgb(0, 68, 255);
         padding-top: 2px;
         padding-bottom: 10px;
-
+        
         @media screen and (min-width: 1440px){
             padding-bottom: 0;
         }
@@ -53,19 +71,31 @@
 
     &__item-drop:not(:last-child){
         margin-bottom: 10px ;
-        
+    
         @media screen and (min-width: 1440px){
             margin-bottom: 6px;
         }
         
     }
+    &__item-drop{
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 19px;
+        letter-spacing: 0.1px;
+        color: $mainColor;
+        cursor: pointer;
 
-  
+        &:hover,&:focus{
+            color: $hoverColor;
+        }
+    }
 
     &__social-padding{
-       padding-top: 5px;
-       padding-bottom: 16px;
-       @media screen and (min-width: 1440px){
+        padding-top: 5px;
+        padding-bottom: 16px;
+        @media screen and (min-width: 1440px){
             padding-top: 0;
             padding-bottom: 0;
         }
@@ -83,8 +113,13 @@
         width: 40px;
         height: 40px;
         position: relative;
+        cursor: pointer;
+        
+        &:hover,&:focus{
+            color: $hoverColor;
+        }
 
-         @media screen and (min-width: 1440px){
+        @media screen and (min-width: 1440px){
             width: 35px;
             height: 35px;
         }
@@ -95,18 +130,35 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        cursor: pointer;
+        color: $mainColor;
+        
+        &:hover,&:focus{
+        color: $hoverColor;
+        }
     }
 
     &__rights{
         text-align: center;
         padding-bottom: 22px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 9px;
+        line-height: 13px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        color: $mainColor;
+        cursor: pointer;
+        
+        &:hover,&:focus{
+            color: $hoverColor;
+        }
 
         @media screen and (min-width: 1440px){
             padding-top: 38px;
         }
     }
-
-   
 }
 
 .is-hidden{
