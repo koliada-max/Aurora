@@ -37,11 +37,17 @@ $hoverColor: rgb(153, 74, 74);
 @import "null";
 body {
 	color: $mainColor;
-	&._lock {
-		overflow: hidden;
-	}
+	// &._lock {
+	// 	overflow: hidden;
+	// }
 }
-
+main{
+    background-image: url("../img/BG1.png");
+    // background-size: cover;
+    background-position: center;
+    background-size: 100%;
+    background-color: #333333;
+}
 // ___________________________
 
 @import "forms";

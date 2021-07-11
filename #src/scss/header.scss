@@ -25,9 +25,9 @@
         width: 104px;
         height: 20.21px;
         margin-top: 20px;
-        // background-color: green;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
-        &:hover{
+        cursor: pointer;
+        &:hover,&:focus{
             color: $hoverColor;
         }
     }
@@ -78,7 +78,7 @@
             text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
             cursor: pointer;
         }
-        &:hover{
+        &:hover,&:focus{
             color: $hoverColor;
         }
     }
@@ -133,7 +133,7 @@
     &__btn-buy._icon-basket{
     color: $witeColor;
     cursor: pointer;
-    &:hover{
+        &:hover,&:focus{
             color: $hoverColor;
         }
     }
@@ -160,8 +160,10 @@
     // position: relative;
     display: flex;
     height: 48px;
-    & :hover{
-    color: $hoverColor;}
+    cursor: pointer;
+        &:hover,&:focus{
+        color: $hoverColor;
+    }
 }
 .search{
     width: 100%;
@@ -202,7 +204,7 @@
     }
 }
 
-.search-btn:hover{
+.search-btn:hover,:focus{
         color: $hoverColor;
     }
 
@@ -231,12 +233,12 @@
     color: $witeColor;
     margin-right: 10px;
     cursor: pointer;
-    &:hover{
+        &:hover,&:focus{
             color: $hoverColor;
         }
-    @media screen and (max-width: 360px){
-        display: none;
-    }
+        @media screen and (max-width: 360px){
+            display: none;
+        }
 }
 .action-header__reg{
     font-family: Poppins;
@@ -245,12 +247,12 @@
     font-size: 11px;
     color: $witeColor;
     cursor: pointer;
-    &:hover{
+        &:hover,&:focus{
             color: $hoverColor;
         }
-    @media screen and (max-width: 360px){
-        display: none;
-    }
+        @media screen and (max-width: 360px){
+            display: none;
+        }
 }
 .action__header_list{
         display: flex;
@@ -288,7 +290,8 @@
 
 ._icon-search{
     color: $witeColor;
-    &:hover{
+    cursor: pointer;
+        &:hover,&:focus{
         color: $hoverColor;
     }
 }
