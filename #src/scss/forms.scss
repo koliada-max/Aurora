@@ -1,0 +1,80 @@
+.form{
+    background-color: $witeColor;
+    width: 100%;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    @media screen and (min-width: 1440px) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+    &__wrapper{
+        width: 328px;
+        margin: 0 auto 0 auto;
+        @media screen and (min-width: 1440px) {
+            width: 439px;
+            margin: 0 auto 0 auto;
+        }
+    }
+    &__container{
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        
+    }
+    &__text-form{
+        width: 328;
+        height: 36px;
+        @media screen and (min-width: 1440px) {
+            width: 100%;
+        }
+    }
+    &__text-user{
+        display: flex;
+        width: 100%;
+        height: 32px;
+        margin-top: 14px;
+        &__in{
+            border: 1px solid #E1E0E1;
+            box-sizing: border-box;
+            border-radius: 3px;
+        }
+    }
+    &__btn-form{
+        margin-left: 8px;
+        margin-right: 0;
+        width: 96px;
+        height: 32px;
+        background-color: $mainColor;
+        border-radius: 3px;
+        color: $witeColor;
+        @media screen and (min-width: 1440px) {
+            max-width: 94px;
+            margin-left: 12px;
+        }
+    }
+    &__input-form{
+        color: #4A4A4A;
+        background-color: $witeColor;
+        width: 224px;
+        height: 32px;
+        border-radius: 3px;
+        border: 1px solid #E1E0E1;
+        padding: 8px 11px 7px 11px;
+        @media screen and (min-width: 1440px) {
+            width: 334px;
+        }
+    }
+    &__input-form::placeholder{
+        color: #4A4A4A; 
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 11px;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+
+

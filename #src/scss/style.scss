@@ -2,8 +2,6 @@
 @import "mixins";
 //</МИКСИНЫ>==================
 
-//<ШРИФТЫ>====================
-
 //<Подключаем шрифты>=========
 //&display=swap&subset=cyrillic-ext
 @import "fonts";
@@ -19,7 +17,6 @@ $fontCormorant: "CormorantGaramond";
 $fontSize: 12;
 //</Шрифт по умолчанию>=======
 
-//</ШРИФТЫ>===================
 
 //<ПЕРЕМЕННЫЕ>================
 $minWidth: 320px;
@@ -44,47 +41,13 @@ body {
 		overflow: hidden;
 	}
 }
-//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>==
 
-//<ОБОЛОЧКА>==
-// .wrapper {
-// 	width: 100%;
-// 	min-height: 100%;
-// 	overflow: hidden;
-// 	display: flex;
-// 	flex-direction: column;
-// 	//     &._loaded {
+// ___________________________
 
-	// }
-// }
-//</ОБОЛОЧКА>==
-
-//<ОСНОВНАЯ СЕТКА>==
-// ._container {
-//     max-width: $maxWidthContainer + px;
-//     padding: 0px 15px;
-// 	margin: 0 auto;
-// }
-//</ОСНОВНАЯ СЕТКА>==
-
-//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>==
 @import "forms";
-@import "ui";
-
-//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>==
-@import "popup";
 @import "header";
 @import "footer";
-@import "home";
 @import "bunner";
 @import "hero";
 @import "container";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>==
-
-//<ОСНОВНОЙ БЛОК>======
-// .page {
-// 	flex: 1 1 auto;
-// }
-//=====================
-
-//</ОСНОВНОЙ БЛОК>=====

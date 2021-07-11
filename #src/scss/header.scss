@@ -27,7 +27,11 @@
         margin-top: 20px;
         // background-color: green;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+        &:hover{
+            color: $hoverColor;
+        }
     }
+    
     &__cart-container{
         display: flex;
         justify-content: center;
@@ -70,33 +74,53 @@
             line-height: 57px;
             /* identical to box height */
             letter-spacing: 0.95px;
-
             color: #FFFFFF;
-
             text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+        }
+        &:hover{
+            color: $hoverColor;
         }
     }
     &__form-search{
-        @media screen and (max-width: 360px) {
-            display: none;
+        display: none;
+        @media screen and (min-width: 1440px) {
+            display: block;
+            margin: 0 auto;
+            // width: 584px;
         }  
     }
     &__nav-container{
         display: flex;
         flex-direction: column;
-        width: 641px;
-        height: 20px;
+        justify-content: center;
+        
+        @media screen and (min-width: 1440px){
+            width: 641px;
+        }
     }
     &__list{
         display: flex;
         flex-wrap: wrap;
         width: 100%;
+        justify-content: space-between;
+        // 
+        align-items: center;
+        @media screen and (min-width: 1440px){
+            margin-bottom: 0;
+            width: 641px;
+            
+        }
+
     }
     &__item{
-        justify-content: space-between;
-        justify-content: center;
-        align-items: center;
-        margin-right: 33px;
+        cursor: pointer;
+        &:hover,&:focus{
+            color: $hoverColor;
+        }
+        @media screen and (min-width: 1440px){
+            margin-bottom: 0;
+        }
     }
     &__input-desk{
         width: 584px;
@@ -105,10 +129,17 @@
     &__registration-container{
         width: 157px;
         display: flex;
-        // background-color: green;
     }
     &__btn-buy._icon-basket{
     color: $witeColor;
+    cursor: pointer;
+    &:hover{
+            color: $hoverColor;
+        }
+    }
+    &__btn-buy{
+        display: flex;
+        align-content: flex-start;
     }
     &__nav{
         margin-top: 24px;
@@ -119,18 +150,18 @@
         font-size: 13px;
         text-align: center;
         text-transform: uppercase;
-        margin-left: -29px;
+        // margin-left: -29px;
         color: #FFFFFF;
         text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
     }
 }
 .search-box{
-width: 550px;
-position: relative;
-display: flex;
-height: 48px;
-& :hover{
-color: $hoverColor;}
+    width: 550px;
+    // position: relative;
+    display: flex;
+    height: 48px;
+    & :hover{
+    color: $hoverColor;}
 }
 .search{
     width: 100%;
@@ -144,8 +175,8 @@ color: $hoverColor;}
     height: 48px;
     padding: 16px 16px 15px 16px;
     font-family: Poppins;
-font-style: normal;
-font-weight: 500;
+    font-style: normal;
+    font-weight: 500;
 
 }
 .search:focus{
@@ -171,7 +202,6 @@ font-weight: 500;
     }
 }
 
-
 .search-btn:hover{
         color: $hoverColor;
     }
@@ -190,6 +220,9 @@ font-weight: 500;
    color:  $witeColor;
 }
 
+
+
+
 .action-header__login{
     font-family: Poppins;
     font-style: normal;
@@ -197,6 +230,10 @@ font-weight: 500;
     font-size: 11px;
     color: $witeColor;
     margin-right: 10px;
+    cursor: pointer;
+    &:hover{
+            color: $hoverColor;
+        }
     @media screen and (max-width: 360px){
         display: none;
     }
@@ -207,6 +244,10 @@ font-weight: 500;
     font-weight: 600;
     font-size: 11px;
     color: $witeColor;
+    cursor: pointer;
+    &:hover{
+            color: $hoverColor;
+        }
     @media screen and (max-width: 360px){
         display: none;
     }
@@ -214,7 +255,7 @@ font-weight: 500;
 .action__header_list{
         display: flex;
         flex-wrap: nowrap;
-        align-items: center;
+        // align-items: center;
         justify-content: flex-start;
         margin-right: 17.72px;
         @media screen and (max-width: 360px){
@@ -229,6 +270,11 @@ font-weight: 500;
         display: none;
     }
 }
+// ___________modal sign in_________
+
+// _______________________________
+
+
 .burger-menu{
     margin-right: 16px;
     width: 20px;
@@ -236,10 +282,15 @@ font-weight: 500;
     border: none;
     margin-top: 22px;
 }
+.burger-menu:hover{
+    color: $hoverColor;
+}
 
 ._icon-search{
     color: $witeColor;
-    
+    &:hover{
+        color: $hoverColor;
+    }
 }
 
 .yellow {
