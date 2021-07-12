@@ -1,3 +1,5 @@
-@@include('files/form.js', {})
+@@include('files/forms.js', {})
 @@include('files/footer.js', {})
 @@include('files/slider.js', {})
+@@include('files/functions.js', {})
+@@include('files/regular.js', {})

@@ -1,25 +1,56 @@
 <header class="header">
-    <!-- mob -->
+    <!-- mob header & burger -->
     <div class="header__wrapper-mob container">
+        <!-- _________start burger_____________________________________ -->
         <div class="header__burger-container">
-            <!-- The overlay -->
-            <div id="myNav" class="overlay">
-                <!-- Button to close the overlay navigation -->
+            <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <!-- Overlay content -->
-                <div class="overlay-content">
-                    <a href="#">About</a>
-                    <a href="#">Services</a>
-                    <a href="#">Clients</a>
-                    <a href="#">Contact</a>
+                <div class="sidenav__logo">
+                    <img class="sidenav__logo_img" src="./img/icons/AuroraBlack.svg" alt="logo">
+                </div>
+                <div class="sidenav__menu">
+                    <ul class class="sidenav__menu-item">
+                        <li class="sidenav__menu-link"><a href="#">what's new &gt;</a></li>
+                        <li class="sidenav__menu-link"><a href="#">women &gt;</a></li>
+                        <li class="sidenav__menu-link"><a href="#">accessories &gt;</a></li>
+                        <li class="sidenav__menu-link"><a href="#">kids &gt;</a></li>
+                        <li class="sidenav__menu-link"><a href="#">beauty &gt;</a></li>
+                        <li class="sidenav__menu-link"><a href="#">outlet &gt;</a></li>
+                        <li class="sidenav__menu-link"><a href="#">stories &gt;</a></li>
+                    </ul>
+                </div>
+                <div class="sidenav__action-user">
+                    <ul class="sidenav__action-item">
+                        <li class="sidenav__action-link">
+                            <a href="#0" class="trigger-btn action-header__login cd-signin" data-toggle="modal">Sing in</a>
+                        </li>
+                        <li class="sidenav__action-link">
+                            <a href="#0" class="action-header__reg cd-sigup">Register</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidenav__navigation">
+                    <ul class="sidenav__navigation-item">
+                        <li class="sidenav__navigation-link">
+                            <a href="" class="map__link_icon _icon-marker"></a>
+                        </li>
+                        <li class="sidenav__navigation-link">
+                            <a href="" class="map__link_store">Our stores</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidenave__footer">
+                    <p class="sidenave__footer-text">We deliver Worldwide</p>
                 </div>
             </div>
             <button class="burger-menu" type="button">
-                <span onclick="openNav()"></span><img src="./img/icons/menu-burger.svg"></span>
+                <span style="font-size:30px;cursor:pointer;color:white" onclick="openNav()">&#9776;</span>
             </button>
+            <!-- ____________end burger menu______________ -->
             <!-- search mob -->
             <button type="submit" class="search-btn_mob _icon-search"></button>
-            <!-- form -->
+
+            <!-- search desktop -->
             <div class="header__form-search">
                 <div class="search-box">
                     <input type="text" class="search" placeholder="What are you looking for?">
@@ -32,12 +63,12 @@
         </div>
         <div class="header__cart-container">
             <button class="header__btn-buy _icon-basket"></button>
-
-            <div class="header__number yellow"><span class="basket-num">99</span></div>
-
+            <div class="header__number yellow">
+                <span class="basket-num">99</span>
+            </div>
         </div>
     </div>
-    <!-- desk -->
+    <!-- desktop header-->
     <div class="header__wrapper-desk container">
         <a class="logo_a" href="">
             <h1 class="header__logo-desk">
