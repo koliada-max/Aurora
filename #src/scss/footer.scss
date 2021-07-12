@@ -169,7 +169,6 @@
             padding-top: 38px;
         }
     }
-
 }
 .is-hidden{
     display: none;
@@ -178,3 +177,14 @@
             display: block;
         }
 }
+
+
+svg{
+    cursor: pointer;
+        
+        &:hover,&:focus{
+            fill: $hoverColor;
+    }
+}
+
+

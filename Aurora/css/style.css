@@ -526,7 +526,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   height: 48px;
-  cursor: pointer;
 }
 
 .search-box:hover,
@@ -541,7 +540,6 @@ body {
   background: rgba(247, 247, 247, 0.24);
   height: 17px;
   outline: none;
-  cursor: pointer;
   font-size: 11px;
   height: 48px;
   padding: 16px 16px 15px 16px;
@@ -677,76 +675,43 @@ body {
   padding-top: 6px;
 }
 
-/* The Overlay (background) */
-
-.overlay {
-  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+.sidenav {
   height: 100%;
   width: 0;
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Sit on top */
-  left: 0;
   top: 0;
-  background-color: black;
-  /* Black fallback color */
-  background-color: rgba(0, 0, 0, 0.9);
-  /* Black w/opacity */
+  left: 0;
+  background-color: #FFFFFF;
   overflow-x: hidden;
-  /* Disable horizontal scroll */
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
-  /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  padding-top: 60px;
 }
 
-/* Position the content inside the overlay */
-
-.overlay-content {
-  position: relative;
-  top: 25%;
-  /* 25% from the top */
-  width: 100%;
-  /* 100% width */
-  text-align: center;
-  /* Centered text/links */
-  margin-top: 30px;
-  /* 30px top margin to avoid conflict with the close button on smaller screens */
-}
-
-/* The navigation links inside the overlay */
-
-.overlay a {
-  padding: 8px;
+.sidenav a {
+  padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 36px;
+  font-size: 25px;
   color: #818181;
   display: block;
-  /* Display block instead of inline */
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  /* Transition effects on hover (color) */
 }
 
-/* When you mouse over the navigation links, change their color */
-
-.overlay a:hover,
-.overlay a:focus {
+.sidenav a:hover {
   color: #f1f1f1;
 }
 
-/* Position the close button (top right corner) */
-
-.overlay .closebtn {
+.sidenav .closebtn {
   position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
-
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 
 .footer {
   background: #F7F7F7;
@@ -911,6 +876,15 @@ body {
   display: none;
 }
 
+svg {
+  cursor: pointer;
+}
+
+svg:hover,
+svg:focus {
+  fill: #994a4a;
+}
+
 .bunner {
   display: none;
 }
@@ -1021,9 +995,9 @@ body {
 
 .hero {
   height: 480px;
-  position: relative;
-  background-color: #d3c598;
   background-size: 100%;
+  background-color: #333333;
+  position: relative;
 }
 
 .hero__title-wrapper {
@@ -1168,7 +1142,7 @@ body {
   }
 
   ._no-webp .hero{
-    background-image: url("../img/bg-desk.jpg"); }
+    background-image: url("../img/1.jpg"); }
 
   .hero {
     height: 658px;
@@ -1228,14 +1202,12 @@ body {
 }
 
 @media screen and (max-height: 450px) {
-  .overlay a {
-    font-size: 20px;
+  .sidenav {
+    padding-top: 15px;
   }
 
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
+  .sidenav a {
+    font-size: 18px;
   }
 }
 
@@ -1248,7 +1220,7 @@ body {
 
 @media screen and (min-width: 1440px){
 
-  ._webp .hero{ background-image: url(../img/bg-desk.webp); }
+  ._webp .hero{ background-image: url(../img/1.webp); }
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx){
